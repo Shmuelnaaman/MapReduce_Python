@@ -18,6 +18,7 @@ def mapper():
     the ENTRIESn_hourly column as the value. For example: 'fog-norain\t12345'
     
     '''
+    UN_MX=  Dyl_avg.groupby(level=['Hour'],as_index=False).apply(lambda t: t[t.ENTRIESn_hourly['mean']==(t.ENTRIESn_hourly['mean']-t.ENTRIESn_hourly['mean'].mean())/t.ENTRIESn_hourly['mean'].std()).reset_index()
 
     # Takes in variables indicating whether it is foggy and/or rainy and
     # returns a formatted key as output.  
